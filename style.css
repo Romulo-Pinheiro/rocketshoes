@@ -1,0 +1,44 @@
+:root {
+    --button: #FF0000;
+    --main-background:  #C4C4C4;
+    --background: #E5E5E5;
+    --text: #000;
+    --footer: #000;
+    --text-description: #9C9696;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background);
+}
+
+#navbar {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 2;
+}
+
+#navbar > ul {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+#navbar > ul > li > a{
+    text-decoration: none;
+    color: var(--text)
+    
+}
+
+#navbar > input{
+    padding: 1px 2px;
+}
