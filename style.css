@@ -4,7 +4,7 @@
     --background: #E5E5E5;
     --text: #000;
     --footer: #000;
-    --text-description: #9C9696;
+    --text-description: #807a7a;
 }
 
 * {
@@ -21,19 +21,23 @@ body{
     font-family: 'Roboto', sans-serif;   
 }
 
+header{
+    margin-left: 5%;
+    position: fixed;
+    width: 90%;
+}
+
 #navbar {
     margin-top: 1.5rem;
     display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    z-index: 2;
+    justify-content: space-between;
 }
 
 #navbar > ul {
-    width: 60%;
+    flex-basis: 55%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     list-style: none;
 }
 
@@ -58,16 +62,44 @@ main{
     flex-grow: 1;
 }
 
-main > aside{
+main > #info{
     flex-basis: 37.5%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+#shoes-info{
+    width: 66%;
+}
 
-main > section{
+#shoes-info > h1{
+    font-size: 76px;
+}
+
+#shoes-info > p{
+    color: var(--text-description);
+    font-weight: 700;
+}
+
+#shoes-info > h2{
+    font-size: 46px;
+}
+
+#shoes-info > button{
+    width: 65%;
+    height: 90px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--button);
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+main > #shoes-imgs{
     flex-grow: 1;
+    background-color: var(--main-background);
 }
 
 footer{
@@ -78,7 +110,6 @@ footer{
 footer > ul{
     flex-grow: 1;
     display: flex;
-    /*justify-content: space-between;*/
     list-style: none;
 }
 
