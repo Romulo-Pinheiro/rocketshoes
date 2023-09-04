@@ -1,131 +1,148 @@
 :root {
-    --button: #FF0000;
-    --main-background:  #C4C4C4;
-    --background: #E5E5E5;
-    --text: #000;
-    --footer: #000;
-    --text-description: #807a7a;
+	--button: #FF0000;
+	--main-background:  #C4C4C4;
+	--background: #E5E5E5;
+	--text: #000;
+	--footer: #000;
+	--text-description: #807a7a;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body{
-    background-color: var(--background);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;   
+	background-color: var(--background);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Roboto', sans-serif;   
 }
 
 header{
-    margin-left: 5%;
-    position: fixed;
-    width: 90%;
+	margin-left: 5%;
+	position: fixed;
+	width: 90%;
 }
 
 #navbar {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: space-between;
+	margin-top: 1.5rem;
+	display: flex;
+	justify-content: space-between;
 }
 
 #navbar > ul {
-    flex-basis: 55%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
+	flex-basis: 55%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	list-style: none;
 }
 
 #navbar > ul > li > a, footer > ul > li > a{
-    text-decoration: none;
-    color: var(--text);
-    font-weight: 700;
-    
+	text-decoration: none;
+	color: var(--text);
+	font-weight: 700;
+	
 }
 
-#navbar > input{
-    padding: 1px 2px;
+#navbar > form{
+	background-color: white;
+	padding: 5px;
+	gap: 5px;
+	display: flex;
+	align-items: center;
+}
+
+
+#navbar > form > input{
+	background-color: transparent;
+	padding: 1px 2px;
+	height: 100%;
+	border-style: none;
+}
+
+#navbar > form > input:focus{
+	box-shadow: 0 0 0 0;
+	outline:0;
 }
 
 #navbar > button{
-    border: none;
-    background-color: inherit;
+	border: none;
+	background-color: inherit;
 }
 
 main{
-    display: flex;
-    flex-grow: 1;
+	display: flex;
+	flex-grow: 1;
 }
 
 main > #info{
-    flex-basis: 37.5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	flex-basis: 37.5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #shoes-info{
-    width: 66%;
+	width: 66%;
 }
 
 #shoes-info > h1{
-    font-size: 76px;
+	font-size: 76px;
 }
 
 #shoes-info > p{
-    color: var(--text-description);
-    font-weight: 700;
+	color: var(--text-description);
+	font-weight: 700;
 }
 
 #shoes-info > h2{
-    font-size: 46px;
+	font-size: 46px;
 }
 
 #shoes-info > button{
-    width: 65%;
-    height: 90px;
-    border: none;
-    border-radius: 15px;
-    background-color: var(--button);
-    color: #fff;
-    font-size: 25px;
-    font-weight: 700;
+	width: 65%;
+	height: 90px;
+	border: none;
+	border-radius: 15px;
+	background-color: var(--button);
+	color: #fff;
+	font-size: 25px;
+	font-weight: 700;
 }
 
 main > #shoes-imgs{
-    flex-grow: 1;
-    background-color: var(--main-background);
+	flex-grow: 1;
+	background-color: var(--main-background);
 }
 
 footer{
-    margin-top: auto;
-    display: flex;
+	margin-top: auto;
+	display: flex;
 }
 
 footer > ul{
-    flex-grow: 1;
-    display: flex;
-    list-style: none;
+	flex-grow: 1;
+	display: flex;
+	list-style: none;
 }
 
 footer > ul > li{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-basis: 15%;
-    height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-basis: 15%;
+	height: 100%;
 }
 
 footer > ul > li:last-child{
-    flex-grow: 1;
-    background-color: var(--footer);
+	flex-grow: 1;
+	background-color: var(--footer);
 }
 
 footer > ul > li:last-child > a {
-    color: white;
+	color: white;
 }
