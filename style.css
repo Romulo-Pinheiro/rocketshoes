@@ -91,7 +91,7 @@ main > #info{
 }
 
 #shoes-info > h1{
-	font-size: 76px;
+	font-size: 72px;
 }
 
 #shoes-info > p{
@@ -114,10 +114,32 @@ main > #info{
 	font-weight: 700;
 }
 
+
 main > #shoes-imgs{
 	flex-grow: 1;
 	background-color: var(--main-background);
 }
+
+#img-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 10%;
+	height: 80%;
+}
+
+#img-container > img{
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+}
+
+#gallery{
+	display: flex;
+}
+
 
 footer{
 	margin-top: auto;
