@@ -16,6 +16,7 @@
 body{
 	background-color: var(--background);
 	min-height: 100vh;
+	max-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	font-family: 'Roboto', sans-serif;   
@@ -77,6 +78,7 @@ header{
 main{
 	display: flex;
 	flex-grow: 1;
+	max-height: 85vh;
 }
 
 main > #info{
@@ -91,7 +93,7 @@ main > #info{
 }
 
 #shoes-info > h1{
-	font-size: 72px;
+	font-size: 4.5rem;
 }
 
 #shoes-info > p{
@@ -100,7 +102,7 @@ main > #info{
 }
 
 #shoes-info > h2{
-	font-size: 46px;
+	font-size: 2.5rem;
 }
 
 #shoes-info > button{
@@ -110,7 +112,7 @@ main > #info{
 	border-radius: 15px;
 	background-color: var(--button);
 	color: #fff;
-	font-size: 25px;
+	font-size: 1.5rem;
 	font-weight: 700;
 }
 
@@ -125,8 +127,8 @@ main > #shoes-imgs{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding-top: 10%;
-	height: 80%;
+	padding-top: 5%;
+	height: 75%;
 }
 
 #img-container > img{
@@ -138,12 +140,30 @@ main > #shoes-imgs{
 
 #gallery{
 	display: flex;
+	justify-content: space-evenly;
+	height: 25%;
 }
 
+#gallery > div > img {
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	border-radius: 5px;
+}
+
+#gallery > div > img:hover{
+	opacity: 0.8;
+}
+
+.active-item{
+	border-bottom: 5px solid var(--button);
+}
 
 footer{
 	margin-top: auto;
 	display: flex;
+	max-height: 15vh;
+	height: 15vh;
 }
 
 footer > ul{
@@ -167,4 +187,17 @@ footer > ul > li:last-child{
 
 footer > ul > li:last-child > a {
 	color: white;
+}
+
+@media screen and (max-width:1280px){
+	#shoes-info > h1{
+		font-size: 3rem;
+	}
+
+	#img-container > img{
+		max-width: 90%;
+		max-height: 90%;
+		width: auto;
+		height: auto;
+	}
 }
