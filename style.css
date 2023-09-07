@@ -26,12 +26,35 @@ header{
 	margin-left: 5%;
 	position: fixed;
 	width: 90%;
+	height: 64px;
 }
 
 #navbar {
-	margin-top: 1.5rem;
+	height: 100%;
+	padding-top: 1.5rem;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+}
+
+.hamburguer{
+	display: none;
+	border: none;
+	background: none;
+	border-top: 3px solid #000;
+	cursor: pointer;
+}
+
+.hamburguer::before, 
+.hamburguer::after{
+	content: " ";
+	display: block;
+	width: 30px;
+	height: 3px;
+	background: #000;
+	margin-top: 5px;
+	position: relative;
+	transition: 0.3s;
 }
 
 #navbar > ul {
@@ -46,7 +69,7 @@ header{
 	text-decoration: none;
 	color: var(--text);
 	font-weight: 700;
-	
+	padding-block: 16px
 }
 
 #navbar > form{
@@ -70,9 +93,10 @@ header{
 	outline:0;
 }
 
-#navbar > button{
+#bag{
 	border: none;
 	background-color: inherit;
+	cursor: pointer;
 }
 
 main{
@@ -106,6 +130,7 @@ main > #info{
 }
 
 #shoes-info > button{
+	cursor: pointer;
 	width: 65%;
 	height: 90px;
 	border: none;
@@ -200,4 +225,75 @@ footer > ul > li:last-child > a {
 		width: auto;
 		height: auto;
 	}
+}
+
+@media (max-width: 768px){
+	
+	.hamburguer{
+		display:block;
+		z-index: 1;
+	}
+
+	#navbar > ul{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: var(--main-background);
+		clip-path: circle(100px at 90% -20%);
+		transition: 1s ease-out;
+
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		gap: 0;
+		pointer-events: none;
+	}
+
+	#navbar > ul a{
+		opacity: 0;
+	}
+
+	#navbar > ul > li:nth-child(1) a{
+		transition: 0.5s 0.2s;
+	}
+
+	#navbar > ul > li:nth-child(2) a{
+		transition: 0.5s 0.4s;
+	}
+
+	#navbar > ul > li:nth-child(3) a{
+		transition: 0.5s 0.6s;
+	}
+
+	#navbar > ul > li:nth-child(4) a{
+		transition: 0.5s 0.8s;
+	}
+
+	#navbar.active ul{
+		clip-path: circle(1500px at 90% -20%);
+		pointer-events: all;
+	}
+
+	#navbar.active ul a{
+		opacity: 1;
+	}
+
+	#navbar.active .hamburguer{
+		position: fixed;
+		top: 26px;
+		right: 16px;
+		border-top-color: transparent;
+	}
+
+	#navbar.active .hamburguer::before{
+		transform: rotate(135deg);
+	}
+
+	#navbar.active .hamburguer::after{
+		transform: rotate(-135deg);
+		top: -7px;
+	}
+
 }

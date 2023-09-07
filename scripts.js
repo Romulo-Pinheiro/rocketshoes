@@ -21,3 +21,7 @@ for (var i = 0; i < items.length; i++) {
 	};
 }
 
+const hamburguer = document.querySelector('.hamburguer');
+const nav = document.querySelector('#navbar');
+
+hamburguer.addEventListener("click", () => nav.classList.toggle("active"))
