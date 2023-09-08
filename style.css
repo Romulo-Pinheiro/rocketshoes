@@ -106,13 +106,18 @@ main{
 }
 
 main > #info{
+	padding-top: 64px;
 	flex-basis: 37.5%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 }
 
 #shoes-info{
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+	max-height: 100%;
+    justify-content: center;
 	width: 66%;
 }
 
@@ -132,7 +137,7 @@ main > #info{
 #shoes-info > button{
 	cursor: pointer;
 	width: 65%;
-	height: 90px;
+	height: 12.5%;
 	border: none;
 	border-radius: 15px;
 	background-color: var(--button);
@@ -226,10 +231,22 @@ footer > ul > li:last-child > a {
 	color: white;
 }
 
-@media screen and (max-width:1280px){
+
+@media screen and (max-width:1640px){
+	#shoes-info > h1{
+		font-size: 3.5rem;
+	}
+
+	#shoes-info > h2{
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width:1400px){
 	#shoes-info > h1{
 		font-size: 3rem;
 	}
+
 
 	#img-container > img{
 		max-width: 90%;
@@ -239,7 +256,28 @@ footer > ul > li:last-child > a {
 	}
 }
 
+@media screen and (max-width:992px){
+	main{
+		flex-direction: column;
+		max-height: max-content;
+		gap: 5vh;
+	}
+
+	main > #info{
+		flex-basis: auto;
+		height: 50vh;
+	}
+}
+
+
 @media (max-width: 768px){
+	#shoes-info > h1{
+		font-size: 2rem;
+	}
+
+	#navbar > form{
+		display: none;
+	}
 
 	.hamburguer{
 		display:block;
@@ -313,4 +351,17 @@ footer > ul > li:last-child > a {
 		width: auto;
 	}
 
+}
+
+@media screen and (max-width:360px){
+	main > #info{
+		margin-top: 5vh;
+	}
+
+}
+
+@media screen and (max-width:320px){
+	#shoes-info > h1, #shoes-info > h2, #shoes-info > button{
+		font-size: 1.25rem;
+	}
 }
