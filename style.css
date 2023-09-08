@@ -232,6 +232,7 @@ footer > ul > li:last-child > a {
 }
 
 
+/* XXL screens*/
 @media screen and (max-width:1640px){
 	#shoes-info > h1{
 		font-size: 3.5rem;
@@ -242,6 +243,7 @@ footer > ul > li:last-child > a {
 	}
 }
 
+/* XL screens */
 @media screen and (max-width:1400px){
 	#shoes-info > h1{
 		font-size: 3rem;
@@ -256,6 +258,7 @@ footer > ul > li:last-child > a {
 	}
 }
 
+/* LG and smaller Screens*/
 @media screen and (max-width:992px){
 	main{
 		flex-direction: column;
@@ -267,9 +270,11 @@ footer > ul > li:last-child > a {
 		flex-basis: auto;
 		height: 50vh;
 	}
+
+
 }
 
-
+/* MD and smaller Screens */
 @media (max-width: 768px){
 	#shoes-info > h1{
 		font-size: 2rem;
@@ -351,6 +356,15 @@ footer > ul > li:last-child > a {
 		width: auto;
 	}
 
+}
+
+/* Special cases */
+@media screen and (max-width:576px){
+	#gallery{
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+	}
 }
 
 @media screen and (max-width:360px){
